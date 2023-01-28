@@ -1,0 +1,18 @@
+{
+  "notifications": [
+    {
+      "type": "版本发布",
+      "title": "1.0.2 版本发布",
+      "date": "2023.01.14",
+      "link": "https://github.com/flowerfine/scaleph/tree/1.0.2",
+      "lang": "zh"
+    },
+    {
+      "type": "Release",
+      "title": "1.0.2 Release",
+      "date": "2023.01.14",
+      "link": "https://github.com/flowerfine/scaleph/tree/1.0.2",
+      "lang": "en"
+    }
+  ]
+}

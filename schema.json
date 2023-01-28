@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "notifications": [
+        {
+          "type": "版本发布",
+          "title": "1.0.2 版本发布",
+          "date": "2023.01.14",
+          "link": "https://github.com/flowerfine/scaleph/tree/1.0.2",
+          "lang": "zh"
+        },
+        {
+          "type": "Release",
+          "title": "1.0.2 Release",
+          "date": "2023.01.14",
+          "link": "https://github.com/flowerfine/scaleph/tree/1.0.2",
+          "lang": "en"
+        }
+      ]
+    }
+  ],
+  "required": ["notifications"],
+  "properties": {
+    "notifications": {
+      "$id": "#/properties/notifications",
+      "type": "array",
+      "title": "The notifications schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "type": "版本发布",
+            "title": "1.0.2 版本发布",
+            "date": "2023.01.14",
+            "link": "https://github.com/flowerfine/scaleph/tree/1.0.2",
+            "lang": "zh"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/notifications/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/notifications/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "type": "版本发布",
+                "title": "1.0.2 版本发布",
+                "date": "2023.01.14",
+                "link": "https://github.com/flowerfine/scaleph/tree/1.0.2",
+                "lang": "zh"
+              }
+            ],
+            "required": ["type", "title", "date", "link", "lang"],
+            "properties": {
+              "type": {
+                "$id": "#/properties/notifications/items/anyOf/0/properties/type",
+                "type": "string",
+                "title": "The type schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["版本发布"]
+              },
+              "title": {
+                "$id": "#/properties/notifications/items/anyOf/0/properties/title",
+                "type": "string",
+                "title": "The title schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["1.0.2 版本发布"]
+              },
+              "date": {
+                "$id": "#/properties/notifications/items/anyOf/0/properties/date",
+                "type": "string",
+                "title": "The date schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["2023.01.14"]
+              },
+              "link": {
+                "$id": "#/properties/notifications/items/anyOf/0/properties/link",
+                "type": "string",
+                "title": "The link schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["https://github.com/flowerfine/scaleph/tree/1.0.2"]
+              },
+              "lang": {
+                "$id": "#/properties/notifications/items/anyOf/0/properties/lang",
+                "type": "string",
+                "title": "The lang schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["zh"]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}
